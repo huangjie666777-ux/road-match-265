@@ -1,0 +1,167 @@
+=== parallel roads (global Viterbi stays on edge 2) ===
+{
+  "observations": [
+    {
+      "index": 0,
+      "matched": {
+        "edge_id": 2,
+        "along": 10.0,
+        "x": 10.0,
+        "y": 8.0,
+        "emission_cost": 0.005
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 1,
+      "matched": {
+        "edge_id": 2,
+        "along": 30.0,
+        "x": 30.0,
+        "y": 8.0,
+        "emission_cost": 0.0007999999999999943
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 2,
+      "matched": {
+        "edge_id": 2,
+        "along": 50.0,
+        "x": 50.0,
+        "y": 8.0,
+        "emission_cost": 0.98
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 3,
+      "matched": {
+        "edge_id": 2,
+        "along": 70.0,
+        "x": 70.0,
+        "y": 8.0,
+        "emission_cost": 0.0018000000000000086
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 4,
+      "matched": {
+        "edge_id": 2,
+        "along": 90.0,
+        "x": 90.0,
+        "y": 8.0,
+        "emission_cost": 0.003200000000000006
+      },
+      "unmatched_reason": null
+    }
+  ],
+  "segments": [
+    {
+      "start_index": 0,
+      "end_index": 4,
+      "total_cost": 8.9908,
+      "transitions": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "path": [
+            2
+          ],
+          "route_distance": 20.0,
+          "transition_cost": 2.0
+        },
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "path": [
+            2
+          ],
+          "route_distance": 20.0,
+          "transition_cost": 2.0
+        },
+        {
+          "from_index": 2,
+          "to_index": 3,
+          "path": [
+            2
+          ],
+          "route_distance": 20.0,
+          "transition_cost": 2.0
+        },
+        {
+          "from_index": 3,
+          "to_index": 4,
+          "path": [
+            2
+          ],
+          "route_distance": 20.0,
+          "transition_cost": 2.0
+        }
+      ]
+    }
+  ]
+}
+=== broken road (segment restarts on edge 2) ===
+{
+  "observations": [
+    {
+      "index": 0,
+      "matched": {
+        "edge_id": 1,
+        "along": 40.0,
+        "x": 40.0,
+        "y": 0.0,
+        "emission_cost": 0.02
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 1,
+      "matched": {
+        "edge_id": 2,
+        "along": 10.0,
+        "x": 70.0,
+        "y": 0.0,
+        "emission_cost": 0.02
+      },
+      "unmatched_reason": null
+    },
+    {
+      "index": 2,
+      "matched": {
+        "edge_id": 2,
+        "along": 30.0,
+        "x": 90.0,
+        "y": 0.0,
+        "emission_cost": 0.02
+      },
+      "unmatched_reason": null
+    }
+  ],
+  "segments": [
+    {
+      "start_index": 0,
+      "end_index": 0,
+      "total_cost": 0.02,
+      "transitions": []
+    },
+    {
+      "start_index": 1,
+      "end_index": 2,
+      "total_cost": 2.04,
+      "transitions": [
+        {
+          "from_index": 1,
+          "to_index": 2,
+          "path": [
+            2
+          ],
+          "route_distance": 20.0,
+          "transition_cost": 2.0
+        }
+      ]
+    }
+  ]
+}
